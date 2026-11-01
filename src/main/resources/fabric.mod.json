@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "unstable_pvp_autospawner",
+  "version": "1.0.0",
+  "name": "Unstable PvP Auto Spawner",
+  "description": "Automatically invokes Carpet PvP Practice to spawn combat bots near players every two minutes.",
+  "environment": "server",
+  "entrypoints": {"main": ["com.mteus.unstablepvp.UnstablePvpAutoSpawner"]},
+  "depends": {"fabricloader": ">=0.19.5", "minecraft": "1.21.11", "java": ">=21", "fabric-api": "*"}
+}
