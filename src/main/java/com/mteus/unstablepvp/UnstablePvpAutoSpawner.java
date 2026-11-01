@@ -29,7 +29,7 @@ public class UnstablePvpAutoSpawner implements ModInitializer {
 
     private static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(Commands.literal("bots")
-            .requires(source -> source.hasPermission(2))
+            .requires(source -> source.permissions().hasPermission(net.minecraft.server.permissions.Permissions.COMMANDS_ADMIN))
             .then(Commands.literal("start").executes(context -> {
                 enabled = true;
                 ticks = 0;
