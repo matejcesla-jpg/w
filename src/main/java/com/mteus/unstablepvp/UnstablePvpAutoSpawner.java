@@ -63,7 +63,7 @@ public class UnstablePvpAutoSpawner implements ModInitializer {
                 "execute as %s at %s positioned ~%d ~ ~%d run bot spawn %s smp average",
                 name, name, dx, dz, botName);
             try {
-                server.getCommands().performPrefixedCommand(server.createCommandSourceStack().withPermission(net.minecraft.server.permissions.PermissionSet.of(net.minecraft.server.permissions.Permissions.COMMANDS_ADMIN)), command);
+                server.getCommands().performPrefixedCommand(server.createCommandSourceStack(), command);
             } catch (Exception ex) {
                 System.err.println("[Unstable PvP] Bot spawn failed: " + ex.getMessage());
             }
